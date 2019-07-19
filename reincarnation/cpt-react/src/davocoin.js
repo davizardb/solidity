@@ -3,7 +3,7 @@ import Web3 from 'web3'
 const ethereum = window.ethereum
 const web3 = new Web3(ethereum)
 
-const address = '0x22f5abd356b8c744ebc811f88c3e2e29d3603887'
+const address = '0x9F940d622E043f4e1E3Dc67374a1AC4b53893bb6'
 
 const abi = 
     [{
@@ -102,13 +102,12 @@ const abi =
     },{
         "anonymous":false,
         "inputs":[{"indexed":true,"name":"_from","type":"address"},{"indexed":true,"name":"_to","type":"address"},{"indexed":false,"name":"_value","type":"uint256"}],
-        "name":"Transfer",
-        "type":"event"
+        "name":"Transfer","type":"event"
     },{
         "anonymous":false,
         "inputs":[{"indexed":true,"name":"_owner","type":"address"},{"indexed":true,"name":"_spender","type":"address"},{"indexed":false,"name":"_value","type":"uint256"}],
-        "name":"Approval",
-        "type":"event"
+        "name":"Approval"
+        ,"type":"event"
     }]
 
     export default new web3.eth.Contract(abi, address);   
